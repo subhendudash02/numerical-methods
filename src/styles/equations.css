@@ -1,0 +1,10 @@
+#equations {
+    text-align: left;
+    margin: 3%;
+}
+
+input[type=text] {
+    padding: 1%;
+    width: 5%;
+    text-align: center;
+}
