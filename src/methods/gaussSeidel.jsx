@@ -1,9 +1,8 @@
 import {round} from 'mathjs';
 
-function gaussSeidel(array) {
+function GaussSeidel(array) {
     // matrix = [[a1, b1, c1, const1], [a2, b2, c2, const2], [a3, b3, c3, const3]]
-
-    let output = ``;
+    var output = document.createElement('p');
 
     for (let i = 0; i < array.length; i++) {
         for (let j = 0; j < array[0].length; j++) {
@@ -19,22 +18,22 @@ function gaussSeidel(array) {
     let y_up = y(x_up, 0);
     let z_up = z(x_up, y_up);
 
-    output += `Iteration - 1: <br>x = ${round(x_up, 4)}<br>
-                                y = ${round(y_up, 4)}<br>
-                                z = ${round(z_up, 4)}<br><br>`;
+    output.innerHTML += `Iteration - 1: <br />x = ${round(x_up, 4)}<br />
+                                y = ${round(y_up, 4)}<br />
+                                z = ${round(z_up, 4)}<br /><br />`;
     
     for (let i = 2; i <= 5; i++) {
             x_up = x(y_up, z_up);
             y_up = y(x_up, z_up);
             z_up = z(x_up, y_up);
 
-            output += `Iteration - ${i}: <br>x = ${round(x_up, 4)}<br>
-                            y = ${round(y_up, 4)}<br>
-                            z = ${round(z_up, 4)}<br><br>`;
+            output.innerHTML += `Iteration - ${i}: <br />x = ${round(x_up, 4)}<br />
+                            y = ${round(y_up, 4)}<br />
+                            z = ${round(z_up, 4)}<br /><br />`;
     }
 
-    console.log(output);
+    return output;
 
 }
 
-export default gaussSeidel; 
+export default GaussSeidel; 
