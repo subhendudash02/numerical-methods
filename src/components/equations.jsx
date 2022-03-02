@@ -32,6 +32,9 @@ class Equations extends React.Component {
         const {a1, b1, c1, const1, a2, b2, c2, const2, a3, b3, c3, const3} = this.state;
         let matrix = [[a1, b1, c1, const1], [a2, b2, c2, const2], [a3, b3, c3, const3]];
         event.preventDefault();
+        
+        
+
         document.body.appendChild(GaussSeidel(matrix));
     }
 
