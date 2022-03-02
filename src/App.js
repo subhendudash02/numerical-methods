@@ -13,8 +13,6 @@ class App extends React.Component {
 
         let {clicked} = this.state;
 
-        console.log(clicked);
-
         return (
             <div className="App">
                 <h1>Numerical Methods</h1>
@@ -25,8 +23,8 @@ class App extends React.Component {
                     <option value="method-2">Simple Iterative Method</option>
                 </select>
 
-                {clicked=="method-1" ? <Equations /> : null}
-                {clicked=="method-2" ? <div><p>Hello</p></div> : null}
+                {clicked==="method-1" ? <Equations /> : null}
+                {clicked==="method-2" ? <div><p>Hello</p></div> : null}
             </div>
             
         );
