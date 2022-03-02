@@ -19,7 +19,7 @@ function GaussSeidel(array) {
     let y_up = y(x_up, 0);
     let z_up = z(x_up, y_up);
 
-    output.innerHTML += `<b>Output</b><br><br>Iteration - 1: <br />x = ${round(x_up, 4)}<br />
+    output.innerHTML += `<h2>Output</h2><br>Iteration - 1: <br />x = ${round(x_up, 4)}<br />
                                 y = ${round(y_up, 4)}<br />
                                 z = ${round(z_up, 4)}<br /><br />`;
     
