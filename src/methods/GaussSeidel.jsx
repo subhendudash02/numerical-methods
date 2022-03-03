@@ -1,10 +1,14 @@
 import {round} from 'mathjs';
 
-function GaussSeidel(array, r) {
+function GaussSeidel(array, r, it) {
     // matrix = [[a1, b1, c1, const1], [a2, b2, c2, const2], [a3, b3, c3, const3]]
     var output = document.createElement('p');
     output.className = "out";
 
+    it = parseInt(it);
+    if (it > 100) {
+        it = 100;
+    }
     r = parseInt(r);
 
     for (let i = 0; i < array.length; i++) {
@@ -25,7 +29,7 @@ function GaussSeidel(array, r) {
                                 y = ${round(y_up, r)}<br />
                                 z = ${round(z_up, r)}<br /><br />`;
     
-    for (let i = 2; i <= 5; i++) {
+    for (let i = 2; i <= it; i++) {
             x_up = x(y_up, z_up);
             y_up = y(x_up, z_up);
             z_up = z(x_up, y_up);

@@ -7,21 +7,22 @@ class EquationsGIM extends React.Component {
         super(props);
         this.state = {
             eq: '',
-            round: ''
-
+            round: '',
+            initial: '',
+            iterations: ''
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleSubmit(event) {
-        const {eq, round} = this.state;
+        const {eq, round, initial, iterations} = this.state;
         event.preventDefault();
         let out = document.querySelector(".out");
         if (out) {
             document.body.removeChild(out);
         }
-        document.body.appendChild(GeneralIterative(eq, round));
+        document.body.appendChild(GeneralIterative(eq, round, initial, iterations));
     }
     
     handleChange(event) {
@@ -39,6 +40,12 @@ class EquationsGIM extends React.Component {
 
                 <h2>Round</h2>
                 <input name="round" type="text" value={this.state.round} onChange={this.handleChange}></input>
+
+                <h2>Initial Value</h2>
+                <input name="initial" type="text" value={this.state.initial} onChange={this.handleChange}></input>
+
+                <h2>Iterations</h2>
+                <input name="iterations" type="text" value={this.state.iterations} onChange={this.handleChange}></input>
 
                 <button>Submit</button>
             </form>

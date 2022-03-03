@@ -25,13 +25,14 @@ class Equations extends React.Component {
             const3: '',
 
             round: '',
+            iterations: ''
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleSubmit(event) {
-        const {a1, b1, c1, const1, a2, b2, c2, const2, a3, b3, c3, const3, round} = this.state;
+        const {a1, b1, c1, const1, a2, b2, c2, const2, a3, b3, c3, const3, round, iterations} = this.state;
         let matrix = [[a1, b1, c1, const1], [a2, b2, c2, const2], [a3, b3, c3, const3]];
         event.preventDefault();
         
@@ -40,7 +41,7 @@ class Equations extends React.Component {
             document.body.removeChild(out);
         }
 
-        document.body.appendChild(GaussSeidel(matrix, round));
+        document.body.appendChild(GaussSeidel(matrix, round, iterations));
     }
 
     handleChange(event) {
@@ -73,6 +74,9 @@ class Equations extends React.Component {
                 
                 <h2>Round</h2>
                 <input name="round" type="text" value={this.state.round} onChange={this.handleChange}></input>
+
+                <h2>Iterations</h2>
+                <input name="iterations" type="text" value={this.state.iterations} onChange={this.handleChange}></input>
 
                 <button>Submit</button>
             </form>
