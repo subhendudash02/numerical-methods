@@ -18,7 +18,7 @@ class App extends React.Component {
         let changeComp = (e) => {
             let out = document.querySelector(".out");
             if (out) {
-                document.removeChild(".out");
+                document.body.removeChild(out);
             }
             this.setState({
                 clicked : e.target.value
