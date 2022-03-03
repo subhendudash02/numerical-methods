@@ -2,7 +2,6 @@ import './styles/App.css';
 import Equations from "./components/equations_gs";
 import React from 'react';
 import EquationsGIM from './components/equaions_gim';
-import { derivative, evaluate, parse } from 'mathjs';
 
 class App extends React.Component {
     constructor(props) {
@@ -11,16 +10,24 @@ class App extends React.Component {
             clicked: ""
         };
     }
+
     render() {
 
         let {clicked} = this.state;
+
+        let changeComp = (e) => {
+            document.removeChild(".out");
+            this.setState({
+                clicked : e.target.value
+            });
+        };
 
         return (
             <div className="App">
                 <h1>Numerical Methods</h1>
                 
                 {/* Dropdowns */}
-                <select name="methods" id="dropdown-method" onChange={(e) => {this.setState({clicked:e.target.value})}}>
+                <select name="methods" id="dropdown-method" onChange={changeComp}>
                     <option defaultValue>NA</option>
                     <option value="method-1">Gauss-Seidel Method</option>
                     <option value="method-2">General Iterative Method</option>
