@@ -1,6 +1,8 @@
 import './styles/App.css';
-import Equations from "./components/equations";
+import Equations from "./components/equations_gs";
 import React from 'react';
+import EquationsGIM from './components/equaions_gim';
+import { derivative, evaluate, parse } from 'mathjs';
 
 class App extends React.Component {
     constructor(props) {
@@ -19,14 +21,15 @@ class App extends React.Component {
                 
                 {/* Dropdowns */}
                 <select name="methods" id="dropdown-method" onChange={(e) => {this.setState({clicked:e.target.value})}}>
+                    <option defaultValue>NA</option>
                     <option value="method-1">Gauss-Seidel Method</option>
-                    <option value="method-2">Simple Iterative Method</option>
+                    <option value="method-2">General Iterative Method</option>
                 </select>
 
                 {clicked==="method-1" ? <Equations /> : null}
-                {clicked==="method-2" ? <div><p>Hello</p></div> : null}
+                {clicked==="method-2" ? <EquationsGIM /> : null}
+                
             </div>
-            
         );
     }
 }

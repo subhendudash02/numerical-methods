@@ -1,5 +1,5 @@
 import React from 'react';
-import "../styles/equations.css";
+import "../styles/equations_gs.css";
 import GaussSeidel from '../methods/GaussSeidel';
 
 class Equations extends React.Component {
@@ -33,7 +33,10 @@ class Equations extends React.Component {
         let matrix = [[a1, b1, c1, const1], [a2, b2, c2, const2], [a3, b3, c3, const3]];
         event.preventDefault();
         
-        
+        let out = document.querySelector(".out");
+        if (out) {
+            document.body.removeChild(out);
+        }
 
         document.body.appendChild(GaussSeidel(matrix));
     }
