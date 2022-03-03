@@ -23,13 +23,15 @@ class Equations extends React.Component {
             b3: '', 
             c3: '', 
             const3: '',
+
+            round: '',
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleSubmit(event) {
-        const {a1, b1, c1, const1, a2, b2, c2, const2, a3, b3, c3, const3} = this.state;
+        const {a1, b1, c1, const1, a2, b2, c2, const2, a3, b3, c3, const3, round} = this.state;
         let matrix = [[a1, b1, c1, const1], [a2, b2, c2, const2], [a3, b3, c3, const3]];
         event.preventDefault();
         
@@ -38,7 +40,7 @@ class Equations extends React.Component {
             document.body.removeChild(out);
         }
 
-        document.body.appendChild(GaussSeidel(matrix));
+        document.body.appendChild(GaussSeidel(matrix, round));
     }
 
     handleChange(event) {
@@ -68,6 +70,10 @@ class Equations extends React.Component {
                 <input name="b3" type="text" id="b2" value={this.state.b3} onChange={this.handleChange} /> y + 
                 <input name="c3" type="text" id="c2" value={this.state.c3} onChange={this.handleChange} /> z = 
                 <input name="const3" type="text" id="const1" value={this.state.const3} onChange={this.handleChange} />
+                
+                <h2>Round</h2>
+                <input name="round" type="text" value={this.state.round} onChange={this.handleChange}></input>
+
                 <button>Submit</button>
             </form>
         );
