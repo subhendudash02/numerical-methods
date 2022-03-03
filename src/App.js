@@ -16,7 +16,10 @@ class App extends React.Component {
         let {clicked} = this.state;
 
         let changeComp = (e) => {
-            document.removeChild(".out");
+            let out = document.querySelector(".out");
+            if (out) {
+                document.removeChild(".out");
+            }
             this.setState({
                 clicked : e.target.value
             });
