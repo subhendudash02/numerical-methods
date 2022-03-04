@@ -1,8 +1,9 @@
 import React from 'react';
 import GeneralIterative from '../methods/GeneralIterative';
+import NewtonRaphson from '../methods/NewtonRaphson';
 import "../styles/equations_gim.css";
 
-class EquationsGIM extends React.Component {
+class EquationOne extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -22,7 +23,16 @@ class EquationsGIM extends React.Component {
         if (out) {
             document.body.removeChild(out);
         }
-        document.body.appendChild(GeneralIterative(eq, round, initial, iterations));
+
+        let dropdown = document.querySelector("#dropdown-method").value;
+
+        if (dropdown === "method-2") {
+            document.body.appendChild(GeneralIterative(eq, round, initial, iterations));
+        }
+        else if(dropdown === "method-3") {
+            document.body.appendChild(NewtonRaphson(eq, round, initial, iterations));
+        }
+        
     }
     
     handleChange(event) {
@@ -53,4 +63,4 @@ class EquationsGIM extends React.Component {
     }
 }
 
-export default EquationsGIM;
+export default EquationOne;

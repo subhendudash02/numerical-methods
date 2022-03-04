@@ -1,7 +1,7 @@
 import './styles/App.css';
-import Equations from "./components/equations_gs";
+import EquationThree from "./components/three_var_eqn";
 import React from 'react';
-import EquationsGIM from './components/equaions_gim';
+import EquationOne from './components/one_var_eqn';
 
 class App extends React.Component {
     constructor(props) {
@@ -34,10 +34,11 @@ class App extends React.Component {
                     <option defaultValue>NA</option>
                     <option value="method-1">Gauss-Seidel Method</option>
                     <option value="method-2">General Iterative Method</option>
+                    <option value="method-3">Newton Raphson Method</option>
                 </select>
 
-                {clicked==="method-1" ? <Equations /> : null}
-                {clicked==="method-2" ? <EquationsGIM /> : null}
+                {clicked==="method-1" ? <EquationThree /> : null}
+                {clicked==="method-2" || clicked === "method-3" ? <EquationOne /> : null}
                 
             </div>
         );

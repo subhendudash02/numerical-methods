@@ -2,7 +2,7 @@ import React from 'react';
 import "../styles/equations_gs.css";
 import GaussSeidel from '../methods/GaussSeidel';
 
-class Equations extends React.Component {
+class EquationThree extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -42,6 +42,7 @@ class Equations extends React.Component {
         }
 
         document.body.appendChild(GaussSeidel(matrix, round, iterations));
+        
     }
 
     handleChange(event) {
@@ -84,4 +85,4 @@ class Equations extends React.Component {
     }
 }
 
-export default Equations;
+export default EquationThree;
