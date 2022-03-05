@@ -72,12 +72,16 @@ class EquationThree extends React.Component {
                 <input name="b3" type="text" id="b2" value={this.state.b3} onChange={this.handleChange} /> y + 
                 <input name="c3" type="text" id="c2" value={this.state.c3} onChange={this.handleChange} /> z = 
                 <input name="const3" type="text" id="const1" value={this.state.const3} onChange={this.handleChange} />
+
+                <br /><br />
                 
-                <h2>Round</h2>
+                <b>Round: </b>
                 <input name="round" type="text" value={this.state.round} onChange={this.handleChange}></input>
 
-                <h2>Iterations</h2>
+                <b> Iterations: </b>
                 <input name="iterations" type="text" value={this.state.iterations} onChange={this.handleChange}></input>
+
+                <br /><br />
 
                 <button>Submit</button>
             </form>

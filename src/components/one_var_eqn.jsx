@@ -48,14 +48,18 @@ class EquationOne extends React.Component {
                 <h2>Equation</h2>
                 <input name="eq" type="text" id="eq" value={this.state.eq} onChange={this.handleChange} />
 
-                <h2>Round</h2>
+                <br /><br />
+
+                <b>Round: </b>
                 <input name="round" type="text" value={this.state.round} onChange={this.handleChange}></input>
 
-                <h2>Initial Value</h2>
+                <b> Initial Value: </b>
                 <input name="initial" type="text" value={this.state.initial} onChange={this.handleChange}></input>
 
-                <h2>Iterations</h2>
+                <b> Iterations: </b>
                 <input name="iterations" type="text" value={this.state.iterations} onChange={this.handleChange}></input>
+
+                <br /><br />
 
                 <button>Submit</button>
             </form>
