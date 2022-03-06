@@ -18,17 +18,18 @@ So, this website demonstrates different iterative numerical methods to solve a s
 
 <br>
 
-# Table of Contents
+## Table of Contents
  - [Getting Started](#getting-started)
  - [Repository Structure](#repository-structure)
  - [Different Methods Used](#different-methods-used)
- - [Libraries Used](#libraries-used)
+ - [Libraries/Tools Used](#librariestools-used)
  - [Contributing](#contributing)
+ - [Acknowledgements](#acknowledgements)
  - [License](#license)
 
 <br>
 
-# Getting Started
+## Getting Started
 
 1. Fork the repository.
 2. Clone the repository.
@@ -57,7 +58,7 @@ npm start
 
 <br>
 
-# Repository Structure
+## Repository Structure
 
 The file structure is very similar to any other React file structure except `src` folder.
 
@@ -84,7 +85,7 @@ src
 
 <br>
 
-# Different Methods Used
+## Different Methods Used
 
 Till now, three methods are added. Expand the name for the details.
 
@@ -113,23 +114,33 @@ In numerical analysis, Newton's method, also known as the Newton–Raphson metho
 
 <br>
 
-# Libraries Used
+## Libraries/Tools Used
 
 1. ReactJS is used for the front-end.
 2. All the algorithms are present in `src>methods` folder, written in JS.
 3. [math.js](https://mathjs.org/) is also used in different methods for rounding off values, differentiation, etc.
 4. CSS for styling the pages.
 
+[Netlify](https://www.netlify.com) is used to deploy the page.
+
 <br>
 
-# Contributing
+## Contributing
 
 New methods/bug fixes/UI fixes are always welcome.
 Make a new issue with a proper heading and description. It will be easy to discuss further and make a PR for the same issue.
 
 <br>
 
-# License
+## Acknowledgements
+
+1. [ReactJS](https://github.com/facebook/react) used under the terms of MIT License, Copyright (c) Facebook, Inc. and its affiliates.
+2. [mathjs](https://github.com/josdejong/mathjs) used under the terms of Apache License 2.0.
+3. Navbar style inspired from [this blog](https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci).
+
+<br>
+
+## License
 
 [Licensed](https://github.com/subhendudash02/numerical-methods/blob/main/LICENSE) Under MIT License
 

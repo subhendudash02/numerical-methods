@@ -19,7 +19,8 @@ class EquationOne extends React.Component {
     handleSubmit(event) {
         const {eq, round, initial, iterations} = this.state;
         event.preventDefault();
-        let out = document.querySelector(".out");
+        let panel = document.querySelector("#panel");
+        let out = panel.querySelector(".out");
         if (out) {
             document.body.removeChild(out);
         }
@@ -27,10 +28,10 @@ class EquationOne extends React.Component {
         let dropdown = document.querySelector("#dropdown-method").value;
 
         if (dropdown === "method-2") {
-            document.body.appendChild(GeneralIterative(eq, round, initial, iterations));
+            panel.appendChild(GeneralIterative(eq, round, initial, iterations));
         }
         else if(dropdown === "method-3") {
-            document.body.appendChild(NewtonRaphson(eq, round, initial, iterations));
+            panel.appendChild(NewtonRaphson(eq, round, initial, iterations));
         }
         
     }
@@ -44,27 +45,29 @@ class EquationOne extends React.Component {
 
     render() {
         return (
-            <form id="equation_gim" onSubmit={this.handleSubmit}>
-                <h2>Equation</h2>
-                <input name="eq" type="text" id="eq" value={this.state.eq} onChange={this.handleChange} />
+            <div className='division'>
+                <form id="equation_gim" onSubmit={this.handleSubmit}>
+                    <h2>Equation</h2>
+                    <input name="eq" type="text" id="eq" value={this.state.eq} onChange={this.handleChange} />
 
-                <br /><br />
+                    <br /><br />
 
-                <b>Round: </b>
-                <input name="round" type="text" value={this.state.round} onChange={this.handleChange}></input>
+                    <b>Round: </b>
+                    <input name="round" type="text" value={this.state.round} onChange={this.handleChange}></input>
 
-                <b> Initial Value: </b>
-                <input name="initial" type="text" value={this.state.initial} onChange={this.handleChange}></input>
+                    <b> Initial Value: </b>
+                    <input name="initial" type="text" value={this.state.initial} onChange={this.handleChange}></input>
 
-                <br /><br />
+                    <br /><br />
 
-                <b> Iterations: </b>
-                <input name="iterations" type="text" value={this.state.iterations} onChange={this.handleChange}></input>
+                    <b> Iterations: </b>
+                    <input name="iterations" type="text" value={this.state.iterations} onChange={this.handleChange}></input>
 
-                <br /><br />
+                    <br /><br />
 
-                <button>Submit</button>
-            </form>
+                    <button>Submit</button>
+                </form>
+            </div>
         );
     }
 }

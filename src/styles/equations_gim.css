@@ -17,6 +17,11 @@ input[type=text] {
     width: 20%;
 }
 
+.division {
+    width: 50%;
+    padding: 3%;
+}
+
 @media only screen and (max-width: 768px) {
     input[type=text] {
         width: 10%;
@@ -24,4 +29,7 @@ input[type=text] {
     #eq {
         width: 60%;
     }    
+    .division {
+        width: 80%;
+    }
 }

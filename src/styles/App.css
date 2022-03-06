@@ -4,12 +4,17 @@
 
 #dropdown-method {
     padding: 1% 1% 1% 1%;
-    border-radius: 8px;
+    border-radius: 10px;
     appearance: none;
     background-image: url("https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png");
     background-repeat: no-repeat;
     background-position: right center;
     width: 20%;
+    margin: 2% 0 0 0;
+}
+
+option {
+    padding: 2%;
 }
 
 .out {
@@ -18,7 +23,10 @@
     color: white;
     padding-left: 1%;
     overflow-y: scroll;
-    height: 450px;
+    height: 400px;
+    width: 50%;
+    text-align: left;
+    padding: 1% 2% 1% 2%;
 }
 
 button {
@@ -33,6 +41,11 @@ button:hover {
     cursor: pointer;
 }
 
+#panel {
+    display: flex;
+    flex-direction: row;
+}
+
 @media only screen and (max-width: 768px) {
     #dropdown-method {
         width: 70%;
@@ -44,5 +57,11 @@ button:hover {
 
     .out {
         padding: 5%;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #panel {
+        flex-direction: column;
     }
 }

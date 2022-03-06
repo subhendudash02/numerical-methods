@@ -10,8 +10,17 @@ input[type=text] {
     font-size: 15px;
 }
 
+.division {
+    width: 50%;
+    padding: 3%;
+}
+
 @media only screen and (max-width: 768px) {
     input[type=text] {
         width: 10%;
+    }
+
+    .division {
+        width: 80%;
     }
 }
