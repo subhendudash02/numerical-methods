@@ -3,14 +3,25 @@
     margin: 3%;
 }
 
+#eq {
+    width: 60%;
+}
+
 input[type=text] {
     padding: 1%;
     width: 5%;
     text-align: center;
-    border: 0;
-    box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
 }
 
 #eq {
     width: 20%;
+}
+
+@media only screen and (max-width: 768px) {
+    input[type=text] {
+        width: 10%;
+    }
+    #eq {
+        width: 60%;
+    }    
 }

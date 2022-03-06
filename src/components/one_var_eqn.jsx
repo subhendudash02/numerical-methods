@@ -56,6 +56,8 @@ class EquationOne extends React.Component {
                 <b> Initial Value: </b>
                 <input name="initial" type="text" value={this.state.initial} onChange={this.handleChange}></input>
 
+                <br /><br />
+
                 <b> Iterations: </b>
                 <input name="iterations" type="text" value={this.state.iterations} onChange={this.handleChange}></input>
 

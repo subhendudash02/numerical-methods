@@ -3,15 +3,22 @@
 }
 
 #dropdown-method {
-    padding: 1%;
-    border-radius: 5px;
+    padding: 1% 1% 1% 1%;
+    border-radius: 8px;
+    appearance: none;
+    background-image: url("https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    width: 20%;
 }
 
 .out {
     margin: 3%;
     background-color: black;
     color: white;
-    padding: 2%;
+    padding-left: 1%;
+    overflow-y: scroll;
+    height: 450px;
 }
 
 button {
@@ -24,4 +31,18 @@ button {
 
 button:hover {
     cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    #dropdown-method {
+        width: 70%;
+    }
+
+    button {
+        padding: 2%;
+    }
+
+    .out {
+        padding: 5%;
+    }
 }

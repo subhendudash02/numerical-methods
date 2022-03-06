@@ -12,7 +12,7 @@
 
 <br>
 
-Finding the solutionds of the mahematical equations in an iterative method is a cumbersome task. It takes a lot of time to compute the value repeatedly in hand and there is a high chance of getting wrong answers too. 
+Finding the solutions of the mahematical equations in an iterative method is a cumbersome task. It takes a lot of time to compute the value repeatedly in hand and there is a high chance of getting wrong answers too. 
 
 So, this website demonstrates different iterative numerical methods to solve a single equation as well as system of equations upto 100 iterations instantly.
 
@@ -117,8 +117,10 @@ In numerical analysis, Newton's method, also known as the Newton–Raphson metho
 
 1. ReactJS is used for the front-end.
 2. All the algorithms are present in `src>methods` folder, written in JS.
-3. [math.js](https://mathjs.org/) is also used i different methods for rounding off values, differentiation, etc.
+3. [math.js](https://mathjs.org/) is also used in different methods for rounding off values, differentiation, etc.
 4. CSS for styling the pages.
+
+<br>
 
 # Contributing
 
@@ -129,7 +131,7 @@ Make a new issue with a proper heading and description. It will be easy to discu
 
 # License
 
-Licensed Under MIT License
+[Licensed](https://github.com/subhendudash02/numerical-methods/blob/main/LICENSE) Under MIT License
 
 Copyright (c) 2022 Subhendu Dash
 

@@ -14,11 +14,11 @@ function GeneralIterative(equation, r, ini, it) {
     let output = document.createElement('p');
     output.className = "out";
 
-    output.innerHTML += `<h2>Output</h2>x0 = ${round(subs.x, r)}<br />`;
+    output.innerHTML += `<h2>Output</h2>x<sub>0</sub> = ${round(subs.x, r)}<br /><br />`;
 
     for (let i = 1; i <= it; i++) {
         subs.x = evaluate(eq, subs);
-        output.innerHTML += `Iteration - ${i}: <br />x${i} = ${round(subs.x, r)}<br />`
+        output.innerHTML += `Iteration - ${i}: <br />x<sub>${i}</sub> = ${round(subs.x, r)}<br /><br />`
     }
 
     return output;

@@ -9,3 +9,9 @@ input[type=text] {
     text-align: center;
     font-size: 15px;
 }
+
+@media only screen and (max-width: 768px) {
+    input[type=text] {
+        width: 10%;
+    }
+}
