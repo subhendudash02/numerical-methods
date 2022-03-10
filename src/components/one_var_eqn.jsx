@@ -20,9 +20,9 @@ class EquationOne extends React.Component {
         const {eq, round, initial, iterations} = this.state;
         event.preventDefault();
         let panel = document.querySelector("#panel");
-        let out = panel.querySelector(".out");
+        let out = document.querySelector(".out");
         if (out) {
-            document.body.removeChild(out);
+            panel.removeChild(out);
         }
 
         let dropdown = document.querySelector("#dropdown-method").value;

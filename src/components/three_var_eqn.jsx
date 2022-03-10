@@ -39,7 +39,7 @@ class EquationThree extends React.Component {
         let out = document.querySelector(".out");
         let panel = document.querySelector("#panel");
         if (out) {
-            document.body.removeChild(out);
+            panel.removeChild(out);
         }
         panel.appendChild(GaussSeidel(matrix, round, iterations));
         
