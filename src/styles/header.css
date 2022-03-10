@@ -7,7 +7,7 @@ a {
 }
 
 .header{
-    border-bottom: 1px solid #E2E8F0;
+    background-color: #0C1017;
 }
 
 .navbar {
@@ -30,17 +30,18 @@ a {
 .nav-link{
     font-size: 20px;
     font-weight: 400;
-    color: #475569;
+    color: #FFFFFF;
 }
 
 .nav-link:hover{
-    color: #482ff7;
+    color: rgb(25, 207, 25);
+    transition-duration: 1s;
 }
 
 .nav-logo {
     font-size: 20px;
     font-weight: 700;
-    color: rgb(27, 168, 27);
+    color: rgb(25, 207, 25);
 }
 
 @media only screen and (max-width: 768px) {

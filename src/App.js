@@ -40,12 +40,16 @@ class App extends React.Component {
                 </header>
                 
                 {/* Dropdowns */}
-                <select name="methods" id="dropdown-method" onChange={changeComp}>
-                    <option defaultValue>NA</option>
-                    <option value="method-1">Gauss-Seidel Method</option>
-                    <option value="method-2">General Iterative Method</option>
-                    <option value="method-3">Newton Raphson Method</option>
-                </select>
+                <div className="top-part">
+                    <h1>Numerical Methods</h1>
+                    <p>Solving all iterative methods in one place!</p>
+                    <select name="methods" id="dropdown-method" onChange={changeComp}>
+                        <option defaultValue>NA</option>
+                        <option value="method-1">Gauss-Seidel Method</option>
+                        <option value="method-2">General Iterative Method</option>
+                        <option value="method-3">Newton Raphson Method</option>
+                    </select>
+                </div>
 
                 <div id="panel">
                     {clicked==="method-1" ? <EquationThree /> : null}

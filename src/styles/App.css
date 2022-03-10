@@ -1,5 +1,7 @@
 .App {
     text-align: center;
+    background-color: #161A23;
+    color: #FFFFFF;
 }
 
 #dropdown-method {
@@ -41,9 +43,17 @@ button:hover {
     cursor: pointer;
 }
 
+.top-part {
+    background-color: rgb(25, 207, 25);
+    color: #000000;
+    padding: 1%;
+    height: 35vh;
+}
+
 #panel {
     display: flex;
     flex-direction: row;
+    padding: 0 0 0 5%;
 }
 
 @media only screen and (max-width: 768px) {
@@ -63,5 +73,9 @@ button:hover {
 
     #panel {
         flex-direction: column;
+    }
+
+    .top-part {
+        height: 25vh;
     }
 }
