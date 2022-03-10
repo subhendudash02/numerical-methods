@@ -81,6 +81,7 @@ src
     ├── index.css
     ├── equations_gim.css
     ├── equations_gs.css
+    ├── header.css
 ```
 
 <br>
@@ -90,14 +91,16 @@ src
 Till now, three methods are added. Expand the name for the details.
 
 <details>
-<summary>Gauss-Seidel Method</summary>
+<summary><b>Gauss-Seidel Method</b></summary>
+<br>
 <p>
 In numerical linear algebra, the Gauss–Seidel method, also known as the Liebmann method or the method of successive displacement, is an iterative method used to solve a system of linear equations.
 </p>
 </details>
 
 <details>
-<summary>General-Iterative Method</summary>
+<summary><b>General-Iterative Method</b></summary>
+<br>
 <p>
 "The General Iteration Method" also known as "The Fixed Point Iteration Method" , uses the definition of the function itself to find the root in a recursive way.
 
@@ -106,7 +109,8 @@ In numerical linear algebra, the Gauss–Seidel method, also known as the Liebma
 </details>
 
 <details>
-<summary>Newton-Raphson Method</summary>
+<summary><b>Newton-Raphson Method</b></summary>
+<br>
 <p>
 In numerical analysis, Newton's method, also known as the Newton–Raphson method, named after Isaac Newton and Joseph Raphson, is a root-finding algorithm which produces successively better approximations to the roots of a real-valued function.
 </p>
